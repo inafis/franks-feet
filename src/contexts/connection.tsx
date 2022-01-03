@@ -99,28 +99,28 @@ export function ConnectionProvider({ children = undefined as any }) {
     cache.clear();
     // fetch token files
     (async () => {
-      const res = await new TokenListProvider().resolve();
-      const list = res
-        .filterByChainId(chain.chainID)
-        .excludeByTag("nft")
-        .getList();
-      const knownMints = list.reduce((map, item) => {
-        map.set(item.address, item);
-        return map;
-      }, new Map<string, TokenInfo>());
+      // const res = await new TokenListProvider().resolve();
+      // const list = res
+      //   .filterByChainId(chain.chainID)
+      //   .excludeByTag("nft")
+      //   .getList();
+      // const knownMints = list.reduce((map, item) => {
+      //   map.set(item.address, item);
+      //   return map;
+      // }, new Map<string, TokenInfo>());
 
-      const accounts = await getMultipleAccounts(connection, [...knownMints.keys()], 'single');
-      accounts.keys.forEach((key, index) => {
-        const account = accounts.array[index];
-        if(!account) {
-          return;
-        }
+      // const accounts = await getMultipleAccounts(connection, [...knownMints.keys()], 'single');
+      // accounts.keys.forEach((key, index) => {
+      //   const account = accounts.array[index];
+      //   if(!account) {
+      //     return;
+      //   }
 
-        cache.add(new PublicKey(key), account, MintParser);
-      })
+      //   cache.add(new PublicKey(key), account, MintParser);
+      // })
 
-      setTokenMap(knownMints);
-      setTokens(list);
+      // setTokenMap(knownMints);
+      // setTokens(list);
     })();
   }, [connection, chain]);
 

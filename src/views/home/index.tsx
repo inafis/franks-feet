@@ -64,7 +64,7 @@ export const HomeView = () => {
           </div>
         ) : (
           <h2> Could not retrieve token </h2>)}
-        <video width="320" height="240" autoPlay muted>
+        <video width="320" height="240" autoPlay muted loop>
           <source src="/mp4.mp4" type="video/mp4" />
         </video>
       </Col>

@@ -40,7 +40,7 @@ export function Routes() {
   return (
     <HashRouter basename={"/"}>
       <ConnectionProvider>
-        <WalletProvider wallets={wallets} autoConnect>
+        <WalletProvider wallets={wallets}>
           <AccountsProvider>
             <MarketProvider>
               <AppLayout>

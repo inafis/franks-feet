@@ -50,6 +50,7 @@ export const HomeView = () => {
             <h2 style={{ display: "inline-flex", alignItems: "center" }}>
               Amount needed before Franks Foot Collection : {formatUSD.format(100000000 - parseInt(tokenTotal.uiAmountString as string))}
             </h2>
+            <h2>We're {((parseInt(tokenTotal.uiAmountString as string) / 100000000)*100)}% of the way to Frank releasing a Foot Pic NFT Collection! </h2>
           </div>
         ) : (
           <h2> Could not retrieve token </h2>)}

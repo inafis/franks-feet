@@ -48,7 +48,7 @@ export const HomeView = () => {
           <div>
             <h2>Total Raised: {formatUSD.format(parseInt(tokenTotal.uiAmountString as string))}</h2>
             <h2 style={{ display: "inline-flex", alignItems: "center" }}>
-              Amount needed before Franks Foot Collection : {formatUSD.format(200000000 - parseInt(tokenTotal.uiAmountString as string))}
+              Amount needed before Franks Foot Collection : {formatUSD.format(100000000 - parseInt(tokenTotal.uiAmountString as string))}
             </h2>
           </div>
         ) : (

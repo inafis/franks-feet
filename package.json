@@ -22,7 +22,7 @@
     "format:fix": "prettier --write \"**/*.+(js|jsx|ts|tsx|json|css|md)\""
   },
   "dependencies": {
-    "@ant-design/icons": "^4.5.0",
+    "@ant-design/icons": "^5.0.1",
     "@craco/craco": "^5.7.0",
     "@project-serum/serum": "^0.13.34",
     "@solana/spl-token": "^0.1.6",
